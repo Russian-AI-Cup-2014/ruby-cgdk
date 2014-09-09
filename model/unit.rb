@@ -52,7 +52,7 @@ class Unit
   # @param [Float] y
   # @return [Float]
   def get_angle_to(x, y)
-    absolute_angle_to = atan2(y - @y, x - @x)
+    absolute_angle_to = Math.atan2(y - @y, x - @x)
     relative_angle_to = absolute_angle_to - @angle
 
     while relative_angle_to > Math::PI
@@ -76,7 +76,7 @@ class Unit
   # @param [Float] y
   # @return [Float]
   def get_distance_to(x, y)
-    hypot(x - @x, y - @y)
+    Math.hypot(x - @x, y - @y)
   end
 
   # @param [Unit] unit
