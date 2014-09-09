@@ -1,5 +1,6 @@
 # noinspection RubyInstanceVariableNamingConvention
 class Unit
+  include Math
   # @return [Integer]
   attr_reader :id
 
