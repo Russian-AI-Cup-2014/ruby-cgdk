@@ -62,4 +62,26 @@ class World
 
     nil
   end
+
+  # @return [Player, NilClass]
+  def my_player
+    @players.each do |player|
+      if player.me
+        return player
+      end
+    end
+
+    nil
+  end
+
+  # @return [Player, NilClass]
+  def opponent_player
+    @players.each do |player|
+      unless player.me
+        return player
+      end
+    end
+
+    nil
+  end
 end
